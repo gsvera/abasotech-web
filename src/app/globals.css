@@ -1,6 +1,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --line-height-standar: 1.625;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,4 +40,197 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+@font-face{
+  font-family: 'Outfit';
+  src: url(/assets/fonts/Outfit-VariableFont_wght.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5{
+  font-family: Outfit;
+}
+
+.t-center{
+  text-align: center;
+}
+.t-bold {
+  font-weight: bold;
+}
+.t-bold-5 {
+  font-weight: 500;
+}
+.t-size-b {
+  font-size: 3.5rem;
+}
+.t-size-l {
+  font-size: 1.8rem!important;
+}
+.t-size-m {
+  font-size: 1.5em;
+}
+.t-size-s {
+  font-size: 1.2em;
+}
+.t-size-xs {
+  font-size: 1.1em;
+}
+.t-c-white{
+  color: var(--text-white);
+}
+.t-letter-space {
+  letter-spacing: 2px;
+}
+.t-line-height-s {
+  line-height: var(--line-height-standar);
+}
+.t-c-orange{
+  color: var(--buton-color);
+}
+.mb-3 {
+  margin-bottom: 1.5rem;
+}
+.p-3{
+  padding: 2.5em;
+}
+.pt-3{
+  padding-top: 2.5em;
+}
+.pb-3{
+  padding-bottom: 2.5em;
+}
+.pl-3{
+  padding-left: 2.5em;
+}
+.pr-3 {
+  padding-right: 2.5em;
+}
+.mb-1{
+  margin-bottom: 1em;
+}
+.t-c-secondary {
+  color: var(--text-color-secondary);
+}
+.t-c-gradient{
+  -webkit-text-size-adjust: 100%;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  tab-size: 4;
+  -webkit-font-smoothing: antialiased;
+  --tw-bg-opacity: 1!important;
+  --tw-text-opacity: 1!important;
+  text-align: center!important;
+  font-family: Figtree,sans-serif;
+  font-weight: 600!important;
+  line-height: 1.5!important;
+  border: 0 solid #e5e7eb;
+  box-sizing: border-box;
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x: ;
+  --tw-pan-y: ;
+  --tw-pinch-zoom: ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position: ;
+  --tw-gradient-via-position: ;
+  --tw-gradient-to-position: ;
+  --tw-ordinal: ;
+  --tw-slashed-zero: ;
+  --tw-numeric-figure: ;
+  --tw-numeric-spacing: ;
+  --tw-numeric-fraction: ;
+  --tw-ring-inset: ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgba(59,130,246,.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur: ;
+  --tw-brightness: ;
+  --tw-contrast: ;
+  --tw-grayscale: ;
+  --tw-hue-rotate: ;
+  --tw-invert: ;
+  --tw-saturate: ;
+  --tw-sepia: ;
+  --tw-drop-shadow: ;
+  --tw-backdrop-blur: ;
+  --tw-backdrop-brightness: ;
+  --tw-backdrop-contrast: ;
+  --tw-backdrop-grayscale: ;
+  --tw-backdrop-hue-rotate: ;
+  --tw-backdrop-invert: ;
+  --tw-backdrop-opacity: ;
+  --tw-backdrop-saturate: ;
+  --tw-backdrop-sepia: ;
+  background-image: linear-gradient(to bottom right,var(--tw-gradient-stops))!important;
+  --tw-gradient-from: #fbbf24 var(--tw-gradient-from-position)!important;
+  --tw-gradient-stops: var(--tw-gradient-from),var(--tw-gradient-to)!important;
+  --tw-gradient-to: #c026d3 var(--tw-gradient-to-position)!important;
+  background-clip: text!important;
+  color: transparent!important;
+}
+.btn-yellow {
+  background-color: var(--buton-color);
+  border: transparent;
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: var(--text-white);
+  font-weight: bold;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.btn-yellow:hover  {
+  background-color: var(--button-color-hover);
+}
+.btn-transparent{
+  background-color: transparent;
+  border: solid 0.1em var(--text-color-secondary);
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: var(--text-white);
+  font-weight: bold;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.btn-transparent:hover{
+  background-color: var(--buton-color);
+  border: none;
+}
+.section{
+  margin: 100px 0 0;
+}
+.width-5 {
+  width: 50%;
+}
+.mx-auto {
+  margin: 0 auto;
+}
+.d-none {
+  display: none;
+}
+.d-flex {
+  display: flex;
+}
+.d-child-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.d-40 {
+  width: 40%;
+}
+.d-70 {
+  width: 60%;
 }
