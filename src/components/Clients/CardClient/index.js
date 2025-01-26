@@ -1,9 +1,12 @@
 import "./index.scss";
 
-export const CardClient = ({ srcImg }) => {
+export const CardClient = ({ dataClient }) => {
+  const { img, filterStyle, site } = dataClient || {};
   return (
     <div className="card-client">
-      <img src={srcImg} className="img-client" />
+      <a href={site} rel="nofollow" target="_blank">
+        <img src={img} className={`img-client ${filterStyle}`} />
+      </a>
     </div>
   );
 };

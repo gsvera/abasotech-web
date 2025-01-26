@@ -1,5 +1,26 @@
 .card-client{
-    .img-client{
-        width: 250px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 150px;
+    margin: 20px;
+    @media(max-width: 520px) {
+        .img-client{
+            max-width: 150px;
+            cursor: pointer;            
+        }   
+    }
+    @media(min-width: 520px) {
+        .img-client{
+            max-width: 115px;
+            cursor: pointer;            
+        }
+    }
+    .img-filter-gray {
+        filter: grayscale(1);
+    }
+    .img-filter-invert {
+        filter: invert(1);
     }
 }

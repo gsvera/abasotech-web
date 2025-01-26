@@ -1,0 +1,19 @@
+.clients {
+    text-align: center;
+    @media(max-width: 520px) {
+        .content-clients {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
+    @media(min-width: 520px) {
+        .content-clients{
+            width: 40%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+        }
+    }
+}

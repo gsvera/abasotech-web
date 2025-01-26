@@ -62,20 +62,74 @@ h1, h2, h3, h4, h5{
 .t-bold-5 {
   font-weight: 500;
 }
-.t-size-b {
-  font-size: 3.5rem;
+@media(max-width: 520px) {
+  .t-size-b {
+    font-size: 2.5rem;
+  }
+  .t-size-l {
+    font-size: 2rem!important;
+  }
+  .t-size-m {
+    font-size: 1.5em;
+  }
+  .t-size-s {
+    font-size: 1.2em;
+  }
+  .t-size-xs {
+    font-size: 1.1em;
+  }
+  .p-3{
+    padding: 1em;
+  }
+  .t-center-mobile {
+    text-align: center;
+  }
 }
-.t-size-l {
-  font-size: 1.8rem!important;
+@media(min-width: 520px) and (max-width: 1400px){
+  .t-size-b {
+    font-size: 3.5rem;
+  }
+  .t-size-l {
+    font-size: 1.8rem!important;
+  }
+  .t-size-m {
+    font-size: 1.5em;
+  }
+  .t-size-xm {
+    font-size: 1.3em;
+  }
+  .t-size-s {
+    font-size: 1.2em;
+  }
+  .t-size-xs {
+    font-size: 1.1em;
+  }
+  .p-3{
+    padding: 2.5em;
+  }
 }
-.t-size-m {
-  font-size: 1.5em;
-}
-.t-size-s {
-  font-size: 1.2em;
-}
-.t-size-xs {
-  font-size: 1.1em;
+@media(min-width: 1400px) {
+  .t-size-b {
+    font-size: 4rem;
+  }
+  .t-size-l {
+    font-size: 2.5rem!important;
+  }
+  .t-size-m {
+    font-size: 1.5em;
+  }
+  .t-size-xm {
+    font-size: 1.4em;
+  }
+  .t-size-s {
+    font-size: 1.4em;
+  }
+  .t-size-xs {
+    font-size: 1.3em;
+  }
+  .p-3{
+    padding: 2.5em;
+  }
 }
 .t-c-white{
   color: var(--text-white);
@@ -92,9 +146,7 @@ h1, h2, h3, h4, h5{
 .mb-3 {
   margin-bottom: 1.5rem;
 }
-.p-3{
-  padding: 2.5em;
-}
+
 .pt-3{
   padding-top: 2.5em;
 }
@@ -211,9 +263,6 @@ h1, h2, h3, h4, h5{
 .section{
   margin: 100px 0 0;
 }
-.width-5 {
-  width: 50%;
-}
 .mx-auto {
   margin: 0 auto;
 }
@@ -228,9 +277,34 @@ h1, h2, h3, h4, h5{
   justify-content: center;
   align-items: center;
 }
-.d-40 {
-  width: 40%;
+@media(max-width: 520px) {
+  .width-5 {
+    width: 90%;
+  }
+  .d-40 {
+    width: 100%;
+  }
+  .d-70 {
+    width: 100%;
+  }
+  .d-flex-res{
+
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
-.d-70 {
-  width: 60%;
+
+@media(min-width: 520px) {
+  .d-flex-res{
+    display: flex;
+  }
+  .width-5 {
+    width: 50%;
+  }
+  .d-40 {
+    width: 40%;
+  }
+  .d-70 {
+    width: 60%;
+  }
 }

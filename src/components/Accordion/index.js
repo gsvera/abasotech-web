@@ -1,26 +1,39 @@
+"use client";
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import "./index.scss";
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
-export const Accordion = ({ title, text }) => {
-  const [open, setOpen] = useState(false);
+export const Accordion = ({ id, title, text, showAnwser, handleShow }) => {
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  const idShowAnswer = useMemo(() => id === showAnwser, [id, showAnwser]);
+
+  if (!isClient) return null;
+
   const handleClick = () => {
-    setOpen((v) => !v);
+    handleShow?.(id);
   };
   return (
     <div className="accordion">
       <div
-        className={`title-accordion ${open && "accordion-selected"}`}
+        className={`title-accordion ${idShowAnswer && "accordion-selected"}`}
         onClick={handleClick}
       >
         <h3 className="">{title}</h3>
-        {open ? <BsChevronUp /> : <BsChevronDown />}
+        {idShowAnswer ? <BsChevronUp /> : <BsChevronDown />}
       </div>
-      <div className={`text-accordion ${!open && "d-none"}`}>
+      <div
+        className={`text-accordion ${
+          idShowAnswer && "text-accordion-selected"
+        }`}
+      >
         <div
           className="t-c-white"
           dangerouslySetInnerHTML={{
-            __html: `<p class="t-c-secondary t-size-xs">${text}</p>`,
+            __html: `<p class="t-c-secondary t-size-xs t-line-height-s">${text}</p>`,
           }}
         ></div>
       </div>
