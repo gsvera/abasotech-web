@@ -8,9 +8,9 @@ export const CardService = ({ imgSrc, title, description, linkSrc }) => {
       </div>
       <div className="card-body">
         <div>
-          <h3 className="card-title">{title}</h3>
+          <h3 className="card-title t-size-xm">{title}</h3>
         </div>
-        <p className="card-description">{description}</p>
+        <p className="card-description t-size-xs">{description}</p>
       </div>
       <div className="card-footer">
         <a href={linkSrc} className="t-c-gradient">

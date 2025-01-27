@@ -3,6 +3,9 @@
 .principal-layout{
     background-color: var(--background-dark);
     .home{
+      .img-home{
+        width: 80%;
+      }
         .section-banner {
             margin: 0;
             display: flex;
@@ -24,13 +27,57 @@
             display: flex;
           }
           .content-header{
+            width: 100%;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
           }
-          .content-title {
-            text-align: center;
-            width: 50%;
+          @media(max-width: 520px) {
+            .content-title {
+              text-align: center;
+              width: 90%;
+            }            
+            .two-columns{
+              flex-wrap: wrap;
+            }
+            .img-two-columns{
+              width: 100%;
+            }
+            .w-8 {
+              width: 90%;
+            }
+            .pr-our-work{
+              margin-top: 50px;
+            }
+          }
+          @media(min-width: 520px) {
+            .content-title {
+              text-align: center;
+              width: 50%;
+            }
+          }
+          @media(min-width: 520px) and (max-width: 1400px){
+            .img-two-columns{
+              width: 600px;
+            }
+            .w-8{
+              width: 80%;
+            }
+            .pr-our-work{
+              padding-left: 2%;
+              padding-right: 4%;
+            }
+          }
+          @media(min-width:1400px) {
+            .img-two-columns{
+              width: 700px;
+            }
+            .w-8{
+              width: 80%;
+            }
+            .pr-our-work{
+              padding-right: 4%;
+            }
           }
           .content-services{
             margin-top: 100px;
@@ -38,9 +85,7 @@
             flex-wrap: wrap;
             justify-content:space-evenly;
           }
-          .img-two-columns{
-            width: 600px;
-          }
+          
           .icon-check{
             color: var(--buton-color);
             font-size: 1.2em;
@@ -54,9 +99,6 @@
           .two-columns{
             display: flex;
             justify-content: center;
-            .w-8{
-                width: 80%;
-            }
           }
     }
 }

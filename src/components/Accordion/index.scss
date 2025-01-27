@@ -7,8 +7,8 @@
         align-items: center;
         justify-content: space-between;
         width: 100% !important;
-    }
-    
+        cursor: pointer;
+    }    
     .accordion-selected {
         background-color: var(--background-secondary);
         h3 {
@@ -16,8 +16,16 @@
         }
     }
     .text-accordion{
-        padding: 15px 20px;
         width: 100% !important;
         text-align: justify;
+        height: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+    }
+    .text-accordion-selected {
+        padding: 15px 20px;
+        height: 100%;
+        max-height: 300px;  
     }
 }
